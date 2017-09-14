@@ -2055,6 +2055,9 @@ func autoConvert_v1alpha2_KubeControllerManagerConfig_To_kops_KubeControllerMana
 	out.AttachDetachReconcileSyncPeriod = in.AttachDetachReconcileSyncPeriod
 	out.TerminatedPodGCThreshold = in.TerminatedPodGCThreshold
 	out.UseServiceAccountCredentials = in.UseServiceAccountCredentials
+	out.HorizontalPodAutoscalerUpscaleDelay = in.HorizontalPodAutoscalerUpscaleDelay
+	out.HorizontalPodAutoscalerDownscaleDelay = in.HorizontalPodAutoscalerDownscaleDelay
+	out.HorizontalPodAutoscalerSyncPeriod = in.HorizontalPodAutoscalerSyncPeriod
 	return nil
 }
 
@@ -2086,6 +2089,9 @@ func autoConvert_kops_KubeControllerManagerConfig_To_v1alpha2_KubeControllerMana
 	out.AttachDetachReconcileSyncPeriod = in.AttachDetachReconcileSyncPeriod
 	out.TerminatedPodGCThreshold = in.TerminatedPodGCThreshold
 	out.UseServiceAccountCredentials = in.UseServiceAccountCredentials
+	out.HorizontalPodAutoscalerUpscaleDelay = in.HorizontalPodAutoscalerUpscaleDelay
+	out.HorizontalPodAutoscalerDownscaleDelay = in.HorizontalPodAutoscalerDownscaleDelay
+	out.HorizontalPodAutoscalerSyncPeriod = in.HorizontalPodAutoscalerSyncPeriod
 	return nil
 }
 

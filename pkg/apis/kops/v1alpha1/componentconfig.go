@@ -290,6 +290,12 @@ type KubeControllerManagerConfig struct {
 	TerminatedPodGCThreshold *int32 `json:"terminatedPodGCThreshold,omitempty" flag:"terminated-pod-gc-threshold"`
 	// UseServiceAccountCredentials controls whether we use individual service account credentials for each controller.
 	UseServiceAccountCredentials *bool `json:"useServiceAccountCredentials,omitempty" flag:"use-service-account-credentials"`
+	// HorizontalPodAutoscalerUpscaleDelay is the period since last upscale, before another upscale can be performed in horizontal pod autoscaler.
+	HorizontalPodAutoscalerUpscaleDelay *metav1.Duration `json:"horizontalPodAutoscalerUpscaleDelay,omitempty" flag:"horizontal-pod-autoscaler-upscale-delay"`
+	// HorizontalPodAutoscalerDownscaleDelay is the period since last downscale, before another downscale can be performed in horizontal pod autoscaler.
+	HorizontalPodAutoscalerDownscaleDelay *metav1.Duration `json:"horizontalPodAutoscalerDownscaleDelay,omitempty" flag:"horizontal-pod-autoscaler-downscale-delay"`
+	// HorizontalPodAutoscalerSyncPeriod is the period for syncing the number of pods in horizontal pod autoscaler.
+	HorizontalPodAutoscalerSyncPeriod *metav1.Duration `json:"horizontalPodSyncPeriod,omitempty" flag:"horizontal-pod-autoscaler-sync-period"`
 }
 
 // KubeSchedulerConfig is the configuration for the kube-scheduler
